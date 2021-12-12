@@ -2,7 +2,9 @@ import React from "react";
 import Web3 from "web3";
 
 export default function Wallet() {
-	const web3 = new Web3();
+	const web3 = new Web3(
+		"https://mainnet.infura.io/v3/53a8467c273146ee9c6b5dc8ec6e3b83"
+	);
 	let wallet = web3.eth.accounts.wallet.create(1);
 
 	let encrypted = wallet.encrypt("Bigfoot4765");
